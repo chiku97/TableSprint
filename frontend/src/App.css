@@ -1,0 +1,136 @@
+/* App.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #662671;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 100;
+}
+
+.logout-btn {
+  background-color: #f44336;
+  height: 5vh;
+  width: 8vw;
+  font-size: 1vw;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-grow: 1;
+  margin-top: 60px; /* Pushes content down below the topbar */
+}
+
+.sidebar {
+  width: 20vw;
+  background-color: #e5e0e9;
+  color: rgb(0, 0, 0);
+  height: calc(100vh - 60px); /* Subtract the height of the topbar */
+  position: fixed;
+  top: 60px; /* Aligns with the bottom of the topbar */
+  left: 0;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* .sidebar ul li {
+  padding: 15px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+} */
+
+.sidebar ul li:hover {
+  background-color: #F4EDAF;
+}
+
+.sidebar ul li svg {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.main-content {
+  margin-left: 22vw; /* Pushes the main content to the right of the sidebar */
+  padding-left: 20px;
+  flex-grow: 1;
+  color: black;
+  background-color: #f4f4f4;
+  height: calc(100vh - 60px);
+  overflow-y: auto; /* Allows scrolling for the dynamic content */
+}
+
+.button-link{
+  padding: 15px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 20vw;
+  background-color:#f9f9f900;
+  color: black;
+  border-color: #fefefe00;
+}
+
+.button-link:focus{
+  background-color: #F4EDAF;
+  border-color: #ffffff00;
+}
+
+h1, h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 5vh;
+}
+
+.dashboard {
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center; /* Horizontally center the container */
+  align-items: center;     /* Vertically center the container */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;  /* Stack the img and h3 vertically */
+  justify-content: center; /* Center the content vertically inside container */
+  align-items: center;     /* Center the content horizontally inside container */
+}
+
+.container img {
+  max-width: 15vw; /* You can adjust the image size as needed */
+}
+
+/* Add styles for active links */
+.active-link {
+  background-color: #8a1d8a;
+  color: white;
+  padding: 10px 0;
+  display: block;
+}
